@@ -36,4 +36,8 @@ git clone https://github.com/joaovitorrb19/DesafioInventSoftwareAPI.git
 - Comandos dentro da pasta ChallengeAPI: 
 - MongoDB precisa estar disponivel na porta padrao 27017 (modificar no appsettings.json)
 
+### Testar o projeto Challenge.UnitTests:
+      dotnet test
+- Comando de da pasta Challenge.UnitTests
+
 http://localhost:5050/swagger/index.html > Swagger para testar o CRUD pelo navegador
