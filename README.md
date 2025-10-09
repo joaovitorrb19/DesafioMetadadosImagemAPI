@@ -40,4 +40,5 @@ git clone https://github.com/joaovitorrb19/DesafioInventSoftwareAPI.git
       dotnet test
 - Comando de da pasta Challenge.UnitTests
 
+### Endereço quando iniciado pelo Docker
 http://localhost:5050/swagger/index.html > Swagger para testar o CRUD pelo navegador
