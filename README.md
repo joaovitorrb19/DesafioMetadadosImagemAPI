@@ -1,5 +1,5 @@
 # ChallengeAPI
-
+- Video Demonstrando o projeto https://www.youtube.com/watch?v=JHBDohX0Jh8
 - API desenvolvida para o desafio da InventSoftware, para CRUD completo do modelo MetadadosDeImagem.
 - Utiliza a arquitetura Service/Repository
 - Os testes cobrem todos os cenarios do Controller,Service e do Repository(utilizado o Mongo2Go para simular o MongoDB)
