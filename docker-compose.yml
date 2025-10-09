@@ -1,0 +1,35 @@
+﻿version: '3.8'
+
+services:
+  mongo:
+    image: mongo:7.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: ChallengeDB
+    volumes:
+      # ANOTAÇÃO: CORRIGIDO!
+      # Removido o "." para usar o "named volume" declarado abaixo.
+      # Antes: - .mongo-data:/data/db
+      - mongo-data:/data/db
+    
+  backend:
+    build: ./ChallengeAPI
+    container_name: challengeapi
+    ports:
+      - "5050:8080"
+      - "8081:8081"
+    depends_on:
+      - mongo
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      # ANOTAÇÃO: É uma boa prática passar a connection string aqui
+      # para desacoplar a aplicação da infraestrutura.
+      - MongoDB:ConnectionString=mongodb://mongo:27017
+      - MongoDB:DatabaseName=ChallengeDB
+
+# ANOTAÇÃO: Esta é a declaração do "named volume".
+# O serviço 'mongo' agora aponta corretamente para ele.
+volumes:
+  mongo-data:

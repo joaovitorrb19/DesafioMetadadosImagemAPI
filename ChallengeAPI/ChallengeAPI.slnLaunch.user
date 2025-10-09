@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "Novo Perfil",
+    "Projects": [
+      {
+        "Path": "ChallengeAPI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
